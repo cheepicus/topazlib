@@ -1,0 +1,32 @@
+/*
+ * sample config file for the kernel library
+ */
+
+telnet_port    = 1177;
+binary_port    = ([ ]); /* (["localhost":4005]); */
+directory      = "/Users/ktb/muds/dgd/topaz/mudlib";
+
+users          = 4;
+editors        = 4;
+ed_tmpfile     = "../state/ed";
+
+swap_file      = "../state/swap";
+swap_size      = 1024;
+cache_size     = 50;
+sector_size    = 512;
+swap_fragment  = 32;
+static_chunk   = 64512;
+dynamic_chunk  = 261120;
+dump_file      = "../state/snapshot";
+dump_interval  = 600;
+
+typechecking   = 2;
+include_file   = "/secure/include.h";
+include_dirs   = ({ "/obj/include", "~/include" });
+auto_object    = "/secure/auto.inh";
+driver_object  = "/secure/driver.d";
+create         = "__create__";
+
+array_size     = 5000;
+objects        = 1000;
+call_outs      = 100;

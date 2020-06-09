@@ -1,0 +1,29 @@
+VERBS
+
+Common object-manipulation verbs are written as files in /verbs.
+
+By id()ing to a noun, an object can be targeted by these verbs. For example,
+if a room wants to have a painting on the wall to look at, it can id to
+"painting" (i.e. id("painting") returns nonzero). But then the player can
+try to "get painting" as well, and obviously this should not result in
+the player trying to add the entire room to their inventory.
+
+What happens in that case is the get verb calls get(string id) in the object
+it has targeted, where 'id' is what the player typed to single it out.
+
+Need a sub object like:
+	add_feature("painting",
+		"It is a lovely painting of a horse.",
+		"It is firmly attached.");
+	add_feature("horse",
+		"It looks healthy and energetic.",
+		"It's part of the painting!");
+
+
+
+TODO
+
+- bust player cmds out into /verbs folder
+- vending machine, one object many ids
+- money, blobs
+- carry weight
